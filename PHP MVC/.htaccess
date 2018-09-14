@@ -1,0 +1,42 @@
+
+DirectoryIndex index.php
+
+# To Redirect to page 403 if direct URL is accessed.
+RedirectMatch 403 ^.*/config/.*
+RedirectMatch 403 ^.*/controllers/.*
+RedirectMatch 403 ^.*/dao/.*
+RedirectMatch 403 ^.*/facade/.*
+RedirectMatch 403 ^.*/logger/.*
+RedirectMatch 403 ^.*/utilities/.* 
+
+# To Stop Showing Index of folders that are not specified above(eg. downloads,uploads,js,resource)    
+IndexIgnore *
+<IfModule mod_rewrite.c>  
+
+# To remove `.php` extension in error page
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(login_error)$ login_error.php  [L,NC]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(customapi/td_prov)$ customapi/td_prov.php [L]
+
+# To remove `index.php` extension from all other pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index\.php [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Maintenance Redirection
+# Replace 555\.555\.555\.555 with your own IP address
+# Uncomment first conditional to turn off the redirection
+RewriteCond %{REQUEST_URI} ^$a
+#RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.000
+RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+RewriteRule (.*) maintenance3.php [L]
+</IfModule>
+

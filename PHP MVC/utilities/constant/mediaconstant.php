@@ -1,0 +1,21 @@
+<?php
+
+namespace utilities\constant;
+
+class MediaConstant {
+	const MEDIA_TYPE_MEDIA = "MEDIA";
+	const MEDIA_TYPE_PROFILE_IMAGE = "PROFILE_IMAGE";
+	const MEDIA_TYPE_THUMBNAIL = "MEDIA_THUMBNAIL";
+	const MEDIA_TYPE_AUDIO = "AUDIO";
+	const MEDIA_TYPE_PROFILE_THUMBNAIL = "PROFILE_IMAGE_THUMBNAIL";
+	const MEDIA_TYPE_PROMO_MEDIA = "PROMO_MEDIA";
+	
+	const DELETED_BY_OWNER = "OWNER";
+	const DELETED_BY_ADMIN = "ADMIN";
+	const DELETED_BY_SYSTEM = "SYSTEM";
+	
+	const THUMBNAIL_CONTENT_TYPE = "image/jpg";
+	const THUMBNAIL_FILE_EXTENSION = "jpg";
+	
+	const PUBLIC_MEDIA_SHARE_FLAG = '1';
+}

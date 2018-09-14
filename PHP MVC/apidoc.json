@@ -1,0 +1,18 @@
+{
+  "name": "Dubuqu-Nxt",
+  "version": "1.0.0",
+  "description": "The Dubuqu Nxt API uses HTTP methods and RESTful endpoints structure. Your format requests in JSON and the APIs return JSON formatted responses.",
+  "title": "Dubuqu Nxt API Docs",
+  "url" : "http://52.76.204.166/dubuqu-nxt/api",
+  "order": [
+	  "Common",
+	  "UserRegistration",
+	  "User",
+	  "SocialGroup",
+	  "Media",
+	  "MediaStories",
+	  "Like",
+	  "Comment",
+	  "PublicProfile"
+	]
+}

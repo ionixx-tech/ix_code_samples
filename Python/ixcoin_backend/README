@@ -1,0 +1,7 @@
+# INSTALL POSTGRESQL using below command
+    sudo 	apt-get install python3-pip python3-dev libpq-dev postgresql 	postgresql-contrib
+
+Steps to initiate new database in POSTGRESQL(Execute all the below commands):
+    sudo su – postgres
+    psql
+    create database ixcoin;

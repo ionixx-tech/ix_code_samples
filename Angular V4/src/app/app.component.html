@@ -1,0 +1,14 @@
+
+<div  [class.page]="showIncludes" [class.home-page]="showIncludes">
+    <navbar-cmp *ngIf="showIncludes || showNavbarComponent"></navbar-cmp>
+  <div  [class.page-content]="showIncludes" [class.d-flex]="showIncludes" [class.align-items-stretch]="showIncludes" [class.candidate-flow]="showNavbarComponent">
+    <sidebar-cmp *ngIf="showIncludes"></sidebar-cmp>
+  <div class="" [class.content-inner]="showIncludes" [class.active]="collapseClicked">
+    <ng2-toasty ></ng2-toasty>
+    <div class="loading-app hide"></div>
+    <div [ngBusy]="busy"></div>
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+</div>
+

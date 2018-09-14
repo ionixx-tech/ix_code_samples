@@ -1,0 +1,10 @@
+web3==4.0.0b11
+Django==2.0.3
+djangorestframework==3.7.7
+django-oauth-toolkit==1.0.0
+psycopg2==2.7.4
+gunicorn==19.7.1
+whitenoise==3.2
+psycopg2-binary==2.7.4
+django-cors-headers==2.2.0
+django-rest-swagger==2.1.2
